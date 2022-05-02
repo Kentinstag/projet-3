@@ -3,7 +3,7 @@
 @use "../tools/colors.scss";
 
 .icon-pad-position {
-    padding: 10px
+    padding: 10px 
 }
 .position  {
     @include mixin.flex-center;

@@ -15,9 +15,10 @@ header {
   height: auto;
 }
 
-
-
-/** POSITION **/
+/* RESPONSIVE */
+.icon-pad-position {
+  padding: 10px;
+}
 
 .position {
   display: flex;
