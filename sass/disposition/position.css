@@ -1,13 +1,17 @@
 /* RESPONSIVE */
-/* COULEURS PRINCIPALES */
-/*COULEURS SECONDAIRES */
+.icon-pad-position {
+  padding: 10px;
+}
+
 .position {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
   background-color: #D8D8D8;
 }
 .position h2 {
-  font-size: 2rem;
+  font-family: "Roboto", " sans serif ";
+  font-size: 1rem;
   font-weight: 400;
 }/*# sourceMappingURL=position.css.map */

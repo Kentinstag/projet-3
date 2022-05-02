@@ -1,11 +1,17 @@
 @use "../tools/variables.scss";
 @use "../tools/mixin.scss";
 @use "../tools/colors.scss";
+
+.icon-pad-position {
+    padding: 10px
+}
 .position  {
     @include mixin.flex-center;
+    padding: 10px;
     background-color: colors.$lightgrey;
         & h2 {
-            font-size: 2rem;
+            font-family: "Roboto", " sans serif ";
+            font-size: 1rem;
             font-weight: 400;
         }
     
