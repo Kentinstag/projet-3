@@ -1,1 +1,12 @@
+@use "../tools/variables.scss";
 @use "../tools/mixin.scss";
+@use "../tools/colors.scss";
+.position  {
+    @include mixin.flex-center;
+    background-color: colors.$lightgrey;
+        & h2 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+    
+}

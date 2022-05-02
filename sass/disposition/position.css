@@ -1,1 +1,13 @@
-/*# sourceMappingURL=position.css.map */
+/* RESPONSIVE */
+/* COULEURS PRINCIPALES */
+/*COULEURS SECONDAIRES */
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D8D8D8;
+}
+.position h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}/*# sourceMappingURL=position.css.map */

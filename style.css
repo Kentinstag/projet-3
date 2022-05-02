@@ -11,4 +11,18 @@ header {
   box-shadow: 0 0 2px solid black;
   width: 100%;
   height: auto;
+}
+
+/* RESPONSIVE */
+/* COULEURS PRINCIPALES */
+/*COULEURS SECONDAIRES */
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #D8D8D8;
+}
+.position h2 {
+  font-size: 1rem;
+  font-weight: 400;
 }/*# sourceMappingURL=style.css.map */
