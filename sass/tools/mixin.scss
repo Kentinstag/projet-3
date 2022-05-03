@@ -1,3 +1,6 @@
+@use "../tools/colors.scss";
+
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -21,7 +24,7 @@
     
 }
 
-@mixin flex-column-centre {
+@mixin flex-column-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,4 +46,29 @@
     justify-content: space-around;
 
     
+}
+
+@mixin gradient-color($opacity:1) {
+    background-image: linear-gradient(  rgba(255,121,218,$opacity) ,rgba(147,86,220,$opacity));
+}
+
+@mixin box-shadow {
+    box-shadow: 2px 1px 8px -2px #7e7e7e;
+}
+
+@mixin button {
+    color: white;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 25px;
+    transition: all;
+    margin-bottom: 40px;
+    @include box-shadow;
+    @include gradient-color(1);
+    &:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+        cursor: pointer;
+        box-shadow: 2px 1px 15px -2px #7e7e7e
+    }
 }

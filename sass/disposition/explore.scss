@@ -1,0 +1,24 @@
+@use "../tools/mixin.scss";
+@use "../tools/colors.scss";
+
+.exploration {
+    text-align: center;
+    background-color: whitesmoke; 
+  & h2 {
+      font-family: "Roboto", "sans serif";
+      margin: 0;
+      padding-top: 20px;
+     
+  }
+    
+  & p {
+      font-family: "Roboto", " sans serif";
+      font-size: medium;
+      padding-bottom: 20px;
+      
+  }
+
+  & button {
+      @include mixin.button
+  }
+}
