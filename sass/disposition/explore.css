@@ -11,4 +11,20 @@
   font-family: "Roboto", " sans serif";
   font-size: medium;
   padding-bottom: 20px;
+}
+.exploration button {
+  color: white;
+  padding: 20px 20px;
+  border: none;
+  border-radius: 25px;
+  transition: all;
+  margin-bottom: 40px;
+  box-shadow: 2px 1px 8px -2px #7e7e7e;
+  background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+}
+.exploration button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  cursor: pointer;
+  box-shadow: 2px 1px 15px -2px #7e7e7e;
 }/*# sourceMappingURL=explore.css.map */

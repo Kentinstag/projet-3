@@ -1,0 +1,29 @@
+@use "../tools/colors.scss";
+
+ footer {
+     background-color: colors.$darkgrey;
+     padding: 5% 8%;
+
+
+     h2 {
+         font-family: "Shrikhand", " cursive";
+         color: white;
+         padding-bottom: 15px;
+
+     }
+
+     p {
+         color: white;
+
+     }
+
+     a {
+         text-decoration: none;
+         color: white;
+     }
+
+     i {
+
+        padding-right: 8px;
+     }
+ }

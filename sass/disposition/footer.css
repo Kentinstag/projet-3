@@ -1,0 +1,19 @@
+footer {
+  background-color: #353535;
+  padding: 5% 8%;
+}
+footer h2 {
+  font-family: "Shrikhand", " cursive";
+  color: white;
+  padding-bottom: 15px;
+}
+footer p {
+  color: white;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer i {
+  padding-right: 8px;
+}/*# sourceMappingURL=footer.css.map */

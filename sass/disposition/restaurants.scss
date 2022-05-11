@@ -1,0 +1,87 @@
+@use "../tools/colors.scss";
+@use "../tools/mixin.scss";
+@use "../tools/variables.scss";
+
+.restaurants {
+    background-color: colors.$WhiteSmoke;
+    padding: 30px 20px;
+   
+    
+    & h2 { 
+        margin-top: 20px;
+
+    }
+   
+}
+
+
+.cube-restaurants {
+    width: 100%;
+    
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    @include mixin.box-shadow;
+    
+   
+    
+
+}
+
+.card-image {
+   object-fit: cover;
+    height: 200px;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+  
+}
+
+.card-body {
+    
+    p1 {
+        font-weight: bold;
+        padding-left: 1%;
+    }
+    p2 {
+        padding-left: 1%;
+        padding-bottom: 3%;
+    }
+   
+    gap: 5px;
+    margin: 20px;
+    @include mixin.flex-column-start;
+@include mixin.heart-animated
+
+   
+}   
+
+
+
+.new {
+    position: relative;
+    border-radius: 10px;
+    
+}
+.new::before {
+    content: "Nouveau";
+    
+    position: absolute;
+    text-align: center;
+    height: 1.8rem;
+    width: 5rem;
+    display: grid;
+    place-items: center;
+    background-color: colors.$tertiary;
+    left: 75%;
+    top: 5%;
+    @media screen and (max-width:variables.$breakpoint2 ) {
+       left: 60%;
+       top: 7%;
+    }
+}
+
+
+
+  
+ 
+

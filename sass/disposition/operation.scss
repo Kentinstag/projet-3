@@ -3,6 +3,70 @@
 @use "../tools/variables.scss";
 
 .operation {
-    padding: 20px 20px;
-    
+    padding: 40px 20px;
+    counter-reset: numbers;
+
+    & ol {
+        display: flex;
+        gap: 30px;
+                flex-direction: column;
+        padding: 10px;
+        margin-right: -10px;
+        white-space: nowrap;
+        font-weight: bold;
+
+    }
+
+    & li {
+        position: relative;
+
+        & ::after {
+            
+            content: counter(numbers);
+            counter-increment: numbers;
+            color: white;
+            background-color: colors.$primary;
+            padding: 8px;
+            height: 7px;
+            width: 7px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 50%;
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        list-style-type: none;
+        background-color: colors.$lightergrey;
+        flex-grow: 1;
+        border-radius: 10px;
+        @include mixin.box-shadow;
+
+        &:hover {
+            @include mixin.scale;
+            background-color: colors.$lightpurple;
+
+            i::before {
+                color: colors.$primary;
+            }
+        }
+
+        & i.fas {
+            color: colors.$grey;
+            padding: 22px;
+            padding-right: 5px;
+        }
+
+
+
+
+
+    }
+
+
+
 }

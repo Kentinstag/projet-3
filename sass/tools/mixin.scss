@@ -18,10 +18,10 @@
 
 @mixin flex-between {
     display: flex;
-   justify-content: space-between;
-   align-items: center;
+    justify-content: space-between;
+    align-items: center;
 
-    
+
 }
 
 @mixin flex-column-center {
@@ -29,15 +29,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  
-}   
+
+}
 
 @mixin flex-column-between {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
-    
+
+
 }
 
 @mixin flex-column-around {
@@ -45,11 +45,17 @@
     flex-direction: column;
     justify-content: space-around;
 
-    
+
 }
 
-@mixin gradient-color($opacity:1) {
-    background-image: linear-gradient(  rgba(255,121,218,$opacity) ,rgba(147,86,220,$opacity));
+@mixin flex-column-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin gradient-color($opacity: 1) {
+    background-image: linear-gradient(rgba(255, 121, 218, $opacity), rgba(147, 86, 220, $opacity));
 }
 
 @mixin box-shadow {
@@ -58,13 +64,14 @@
 
 @mixin button {
     color: white;
-    padding: 20px 40px;
+    padding: 20px 20px;
     border: none;
     border-radius: 25px;
     transition: all;
     margin-bottom: 40px;
     @include box-shadow;
     @include gradient-color(1);
+
     &:hover {
         transform: scale(1.05);
         opacity: 0.9;
@@ -72,3 +79,162 @@
         box-shadow: 2px 1px 15px -2px #7e7e7e
     }
 }
+
+@mixin scale {
+    transform: scale(1.05);
+    cursor: pointer;
+
+}
+
+
+
+
+@mixin heart ($opacity: 1, $font-weight: 400, $color: inherit) {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "font awesome 5 free";
+    content: "\f004";
+    font-size: 25px;
+    position: absolute;
+    right: 1rem;
+    top: 5%;
+    
+   
+    color: $color;
+    background-clip: text;
+    opacity: $opacity;
+    transition: all 200ms ease-in-out;
+    
+
+   
+
+}
+
+    
+
+@mixin heart-animated {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        @include heart;
+        
+        
+    }
+    
+    &::after {
+        
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "font awesome 5 free";
+        content: "\f004";
+        $opacity : 0;
+        
+        position: absolute;
+        right: 1rem;
+        top: 5%;
+        font-size: 25px;
+        
+        opacity: 0;
+        @include gradient-color(1);
+       
+       transition: all 400ms;
+        
+        
+    }
+    &:hover::after {
+       
+        opacity: 1;
+        background-clip: content-box;
+       cursor: pointer;
+       scale: 1.05 ;
+    }
+}
+// heart animated for menus //
+
+@mixin heart-menu ($opacity: 1, $font-weight: 400, $color: inherit) {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "font awesome 5 free";
+    content: "\f004";
+    font-size: 25px;
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    
+   
+    color: $color;
+    background-clip: text;
+    opacity: $opacity;
+    transition: all 200ms ease-in-out;
+    
+
+   
+
+}
+
+    
+
+@mixin heart-animated-menu {
+    position: relative;
+    overflow: hidden;
+    &::before {
+        @include heart-menu;
+        
+    }
+    
+    &::after {
+        
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "font awesome 5 free";
+        content: "\f004";
+        $opacity : 0;
+        
+        position: absolute;
+        left: 85%;
+        top: 50%;
+        font-size: 25px;
+        
+        opacity: 0;
+        @include gradient-color(1);
+       
+       transition: all 400ms;
+        
+        
+    }
+    &:hover::after {
+       
+        opacity: 1;
+        background-clip: content-box;
+       cursor: pointer;
+       scale: 1.05 ;
+    }
+}
+
+
+
+
+// end //
+   @mixin back-button {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "font awesome 5 free";
+    content: "\f060";
+    font-weight: bold;
+    font-size: x-large;
+   }
