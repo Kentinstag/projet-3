@@ -104,7 +104,8 @@
     
    
     color: $color;
-    background-clip: text;
+    -webkit-background-clip: text;
+    
     opacity: $opacity;
     transition: all 200ms ease-in-out;
     

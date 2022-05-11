@@ -77,8 +77,8 @@ a {
   font-family: "font awesome 5 free";
   content: "\f004";
   position: absolute;
-  right: 1rem;
-  top: 5%;
+  left: 85%;
+  top: 50%;
   font-size: 25px;
   opacity: 0;
   background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));

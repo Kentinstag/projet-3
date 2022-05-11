@@ -27,7 +27,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   background-color: #D8D8D8;
 }
 .position h2 {

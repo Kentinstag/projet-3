@@ -30,6 +30,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  overflow: hidden;
 }
 .card-body p1 {
   font-weight: bold;
@@ -50,27 +51,34 @@
   font-size: 25px;
   position: absolute;
   right: 1rem;
-  top: 25%;
-  transform: translateY(-50%);
+  top: 5%;
   color: inherit;
   -webkit-background-clip: text;
+          background-clip: text;
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-.card-body::before::before {
-  content: "";
+.card-body::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "font awesome 5 free";
+  content: "\f004";
   position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: 1rem;
+  top: 5%;
+  font-size: 25px;
+  opacity: 0;
   background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
-  border-radius: 50px 50px 0 0;
-  transition: all 5s;
+  transition: all 400ms;
 }
-.card-body:hover::before {
-  top: 0px;
-  border-radius: 0;
+.card-body:hover::after {
+  opacity: 1;
+  background-clip: content-box;
+  cursor: pointer;
+  scale: 1.05;
 }
 
 .new {
