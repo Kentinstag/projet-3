@@ -46,6 +46,8 @@
         border-radius: 10px;
         @include mixin.box-shadow;
 
+       
+
         &:hover {
             @include mixin.scale;
             background-color: colors.$lightpurple;
@@ -61,12 +63,5 @@
             padding-right: 5px;
         }
 
-
-
-
-
     }
-
-
-
 }

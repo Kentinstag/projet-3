@@ -47,10 +47,11 @@
         padding-bottom: 3%;
     }
    
-    gap: 5px;
     margin: 20px;
+    gap: 5px;
+   
     @include mixin.flex-column-start;
-@include mixin.heart-animated
+
 
    
 }   
@@ -80,8 +81,41 @@
     }
 }
 
+.empty-heart {
+   
+    
+    position: absolute; 
+    z-index: 0;
+    font-size: 170%;
+    left: 370px;
 
+    &:hover {
+        opacity: 0;
+    }
+}
 
+.full-heart {
+    z-index: 1;
+    font-size: 172%;
+    
+    position: absolute;
+   left: 370px;
+    opacity: 0;
+    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220,));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: solid; 
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.pad-heart-cheat {
+    padding-left: 20px;
+}
   
  
 

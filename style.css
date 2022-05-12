@@ -20,7 +20,7 @@ body {
 
 /* RESPONSIVE */
 .icon-pad-position {
-  padding: 10px;
+  padding-top: 18px;
 }
 
 .position {
@@ -32,7 +32,8 @@ body {
 .position h2 {
   font-family: "Roboto", " sans serif ";
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
+  padding-bottom: 10px;
 }
 
 .exploration {
@@ -143,13 +144,11 @@ body {
 }
 
 .card-body {
-  gap: 5px;
   margin: 20px;
+  gap: 5px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
-  overflow: hidden;
 }
 .card-body p1 {
   font-weight: bold;
@@ -158,46 +157,6 @@ body {
 .card-body p2 {
   padding-left: 1%;
   padding-bottom: 3%;
-}
-.card-body::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "font awesome 5 free";
-  content: "\f004";
-  font-size: 25px;
-  position: absolute;
-  right: 1rem;
-  top: 5%;
-  color: inherit;
-  -webkit-background-clip: text;
-          background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-.card-body::after {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  font-family: "font awesome 5 free";
-  content: "\f004";
-  position: absolute;
-  right: 1rem;
-  top: 5%;
-  font-size: 25px;
-  opacity: 0;
-  background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
-  transition: all 400ms;
-}
-.card-body:hover::after {
-  opacity: 1;
-  background-clip: content-box;
-  cursor: pointer;
-  scale: 1.05;
 }
 
 .new {
@@ -222,6 +181,38 @@ body {
     left: 60%;
     top: 7%;
   }
+}
+
+.empty-heart {
+  position: absolute;
+  z-index: 0;
+  font-size: 170%;
+  left: 370px;
+}
+.empty-heart:hover {
+  opacity: 0;
+}
+
+.full-heart {
+  z-index: 1;
+  font-size: 172%;
+  position: absolute;
+  left: 370px;
+  opacity: 0;
+  background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: solid;
+}
+.full-heart:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.pad-heart-cheat {
+  padding-left: 20px;
 }
 
 footer {
