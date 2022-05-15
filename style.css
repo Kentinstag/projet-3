@@ -240,6 +240,16 @@ a {
   color: black;
 }
 
+main {
+  background-color: #f6f6f6;
+}
+
+.padding-cheat {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+
 .header-menu {
   font-family: "shrikhand", cursive;
   text-align: center;
@@ -276,6 +286,14 @@ a {
   max-height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.colored-border {
+  border-bottom: 2px solid #99e2d0;
+  max-width: 40px;
+}
+.colored-border p {
+  margin-bottom: 4px;
 }
 
 .menu-size {
@@ -326,10 +344,37 @@ a {
   cursor: pointer;
   scale: 1.05;
 }
-
-h2 {
+.menu-size h2 {
   font-family: "Shrikhand", "cursive";
   padding-top: 30px;
   padding-left: 20px;
   white-space: nowrap;
+}
+
+.menu-badge {
+  width: auto;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  border-radius: 25px;
+  margin-top: 30px;
+  border: 0.5px solid #f2f2f2;
+  background-color: white;
+  box-shadow: 2px 1px 8px -2px #7e7e7e;
+}
+
+.price-pad {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.price-bold {
+  font-weight: bold;
+}
+
+.gap-reduc {
+  line-height: 5px;
 }/*# sourceMappingURL=style.css.map */
