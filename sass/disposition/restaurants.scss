@@ -61,7 +61,7 @@
 .new {
     position: relative;
     border-radius: 10px;
-    
+  
 }
 .new::before {
     content: "Nouveau";
@@ -75,11 +75,15 @@
     background-color: colors.$tertiary;
     left: 75%;
     top: 5%;
+
+    
+
     @media screen and (max-width:variables.$breakpoint2 ) {
        left: 60%;
        top: 7%;
     }
 }
+
 
 .empty-heart {
    
@@ -87,7 +91,7 @@
     position: absolute; 
     z-index: 0;
     font-size: 170%;
-    left: 370px;
+    left: 85%;
 
     &:hover {
         opacity: 0;
@@ -99,7 +103,7 @@
     font-size: 172%;
     
     position: absolute;
-   left: 370px;
+   left: 85%;
     opacity: 0;
     background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220,));
     background-clip: text;
@@ -113,9 +117,49 @@
     }
 }
 
-.pad-heart-cheat {
-    padding-left: 20px;
+// cheat pour garder le même alignement des coeurs sans " nouveau "
+
+
+.empty-heart-cheated {
+   
+    
+    position: absolute; 
+    z-index: 0;
+    font-size: 170%;
+    left: 82.5%;
+
+    &:hover {
+        opacity: 0;
+    }
+    @media screen and (min-width: 1000px) {
+        left: 83%
+    }
+    
 }
-  
+
+.full-heart-cheated {
+    z-index: 1;
+    font-size: 172%;
+    
+    position: absolute;
+   left: 82.5%;
+    opacity: 0;
+    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220,));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: solid; 
+
+    @media screen and (min-width: 1000px) {
+        left: 83%
+    }
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
  
 

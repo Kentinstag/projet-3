@@ -57,6 +57,45 @@ main {
 
 }
 
+.empty-heart {
+   
+    
+    position: absolute; 
+    z-index: 0;
+    font-size: 170%;
+    left: 85%;
+    
+   
+
+    &:hover {
+        opacity: 0;
+    }
+}
+
+.full-heart {
+    z-index: 1;
+    font-size: 172%;
+    
+    position: absolute;
+   left: 85%;
+   
+  
+   
+   
+    opacity: 0;
+    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220,));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: solid; 
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+
 .colored-border {
     border-bottom: 2px solid colors.$tertiary;
     max-width: 40px;
@@ -66,12 +105,12 @@ main {
 }
 
 .menu-size {
+    @include mixin.flex-between;
     background-color: colors.$lightergrey;
     border-radius: 35px 35px 0 0;
     position: relative;
     margin-top: -50px;
-    @include mixin.heart-animated-menu;
-
+    
     & h2 {
 
         font-family: "Shrikhand", "cursive";
@@ -113,4 +152,12 @@ main {
 
 .gap-reduc {
     line-height: 5px;
+}
+
+.button-flex {
+    @include mixin.flex-center;
+
+    & button {
+        @include mixin.button-menus;
+    }
 }
