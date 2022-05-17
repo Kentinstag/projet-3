@@ -116,6 +116,11 @@ main {
   box-shadow: 2px 1px 8px -2px #7e7e7e;
 }
 
+.chicken-adjust {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .price-pad {
   display: inline-block;
   display: flex;
