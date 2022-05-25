@@ -1,6 +1,7 @@
 @use "../tools/colors.scss";
 @use "../tools/mixin.scss";
 @use "../tools/variables.scss";
+@use "../tools/animations.scss";
 
 
 
@@ -58,14 +59,14 @@ main {
 }
 
 .empty-heart {
-   
-    
-    position: absolute; 
+
+
+    position: absolute;
     z-index: 0;
     font-size: 170%;
     left: 85%;
-    
-   
+
+
 
     &:hover {
         opacity: 0;
@@ -75,19 +76,20 @@ main {
 .full-heart {
     z-index: 1;
     font-size: 172%;
-    
+
     position: absolute;
-   left: 85%;
-   
-  
-   
-   
+    left: 85%;
+
+
+
+
     opacity: 0;
-    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220,));
+    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220, ));
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: solid; 
+    -webkit-text-fill-color: solid;
+
     &:hover {
         opacity: 1;
         cursor: pointer;
@@ -99,6 +101,7 @@ main {
 .colored-border {
     border-bottom: 2px solid colors.$tertiary;
     max-width: 40px;
+
     & p {
         margin-bottom: 4px;
     }
@@ -110,7 +113,7 @@ main {
     border-radius: 35px 35px 0 0;
     position: relative;
     margin-top: -50px;
-    
+
     & h2 {
 
         font-family: "Shrikhand", "cursive";
@@ -126,13 +129,14 @@ main {
     width: auto;
     padding-left: 20px;
     padding-right: 30px;
-    
+
     padding-bottom: 10px;
     border-radius: 25px;
 
     margin-top: 30px;
     border: 0.5px solid #f2f2f2;
     background-color: white;
+    text-overflow: ellipsis;
     @include mixin.box-shadow;
 
 
@@ -169,3 +173,18 @@ main {
     }
 }
 
+
+.slide-left {
+	animation: slide-left 0.5s ease-in-out both;
+    
+
+    @keyframes slide-left {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50px);
+        }
+}
+
+}  

@@ -266,6 +266,59 @@ footer i {
   padding-right: 8px;
 }
 
+@-webkit-keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes quarterspin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
 a {
   text-decoration: none;
   color: black;
@@ -380,6 +433,7 @@ main {
   margin-top: 30px;
   border: 0.5px solid #f2f2f2;
   background-color: white;
+  text-overflow: ellipsis;
   box-shadow: 2px 1px 8px -2px #7e7e7e;
 }
 
@@ -425,4 +479,17 @@ main {
   opacity: 0.9;
   cursor: pointer;
   box-shadow: 2px 1px 15px -2px #7e7e7e;
+}
+
+.slide-left {
+  -webkit-animation: slide-left 0.5s ease-in-out both;
+          animation: slide-left 0.5s ease-in-out both;
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
 }/*# sourceMappingURL=style.css.map */
