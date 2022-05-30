@@ -150,12 +150,27 @@ main {
 .price-pad {
     display: inline-block;
     @include mixin.flex-between;
-    padding-bottom: 10px;
+
+    padding-left: 10px;
+    padding-right: 20px;
 
 }
 
+.price-title {
+    padding-left: 10px;
+
+    & h4 {
+        margin: 0px;
+        margin-top: 10px;
+    }
+}
+
+
 .price-bold {
     font-weight: bold;
+    //* lorsque Hover pour déclencher plus tôt l'ellipsis
+    padding-left: 10px;
+    //*
 }
 
 
@@ -174,17 +189,80 @@ main {
 }
 
 
-.slide-left {
-	animation: slide-left 0.5s ease-in-out both;
+
+.container {
+    
+    margin-top: 20px;
+    width: 414px;
+    border-radius: 20px;
+    background-color: white;
+    @include mixin.box-shadow;
     
 
-    @keyframes slide-left {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50px);
-        }
-}
 
-}  
+    &:hover {
+        display: flex;
+
+        .left {
+
+            animation: margin-right 1s ease-in-out;
+        }
+
+        .right {
+
+            transition: all 1s ease-in-out;
+            display: inline-flex;
+
+        }
+
+        & i {
+            @include animations.rotate-center;
+            animation: rotate-center 0.6s ease-in-out;
+        }
+
+        & p {
+             overflow: hidden;
+             white-space: nowrap;
+             text-overflow: ellipsis;
+
+        }
+
+        & h4 {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        cursor: pointer;
+    }
+
+    & i {
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        font-size: 20px;
+        color: colors.$tertiary;
+        background-color: white;
+        border-radius: 20px;
+    }
+
+    .left {
+        border-radius: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-color: white;
+        transition: all 2s ease-in-out;
+        flex-grow: 1;
+
+    }
+
+    .right {
+        display: none;
+      
+        align-items: center;
+        justify-content: center;
+        background-color: colors.$tertiary;
+        width: 80px;
+        border-radius: 0 20px 20px 0;
+        
+    }
+}

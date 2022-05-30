@@ -133,7 +133,8 @@ body {
 }
 
 .card-image {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 200px;
   width: 100%;
   border-radius: 15px 15px 0 0;
@@ -314,7 +315,8 @@ main {
   display: block;
   width: 100%;
   max-height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .empty-heart {
@@ -392,21 +394,11 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 20px;
-}
-
-.price-title {
-  padding-left: 10px;
-}
-.price-title h4 {
-  margin: 0px;
-  margin-top: 10px;
+  padding-bottom: 10px;
 }
 
 .price-bold {
   font-weight: bold;
-  padding-left: 10px;
 }
 
 .gap-reduc {
@@ -436,69 +428,23 @@ main {
   box-shadow: 2px 1px 15px -2px #7e7e7e;
 }
 
-.container {
-  margin-top: 20px;
-  width: 414px;
-  border-radius: 20px;
-  background-color: white;
-  box-shadow: 2px 1px 8px -2px #7e7e7e;
+.slide-left {
+  -webkit-animation: slide-left 0.5s ease-in-out both;
+          animation: slide-left 0.5s ease-in-out both;
 }
-.container:hover {
-  display: flex;
-  cursor: pointer;
-}
-.container:hover .left {
-  animation: margin-right 1s ease-in-out;
-}
-.container:hover .right {
-  transition: all 1s ease-in-out;
-  display: inline-flex;
-}
-.container:hover i {
-  animation: rotate-center 0.6s ease-in-out;
-}
-@keyframes rotate-center {
+@-webkit-keyframes slide-left {
   0% {
-    transform: rotate(0);
+    transform: translateX(0);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translateX(-50px);
   }
 }
-.container:hover p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.container:hover h4 {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.container i {
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
-  font-size: 20px;
-  color: #99e2d0;
-  background-color: white;
-  border-radius: 20px;
-}
-.container .left {
-  border-radius: 20px;
-  white-space: nowrap;
-  overflow: hidden;
-  background-color: white;
-  transition: all 2s ease-in-out;
-  flex-grow: 1;
-}
-.container .right {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background-color: #99e2d0;
-  width: 80px;
-  border-radius: 0 20px 20px 0;
-}
-
-/*# sourceMappingURL=style.css.map */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}/*# sourceMappingURL=style.css.map */

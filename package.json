@@ -1,4 +1,9 @@
 {
+  "name" : "ohmyfood",
+  "version" : "1.0.0",
+  "scripts" : {
+    "sass" : "sass --watch ./sass/style.scss:./style.css"
+  },
   "dependencies": {
     "sass": "^1.51.0"
   }
