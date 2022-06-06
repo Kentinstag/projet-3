@@ -1,6 +1,6 @@
-@use "../tools/colors.scss";
-@use "../tools/mixin.scss";
-@use "../tools/variables.scss";
+@use "../utils/colors.scss";
+@use "../utils/mixin.scss";
+@use "../utils/variables.scss";
 
 .restaurants {
     background-color: colors.$WhiteSmoke;

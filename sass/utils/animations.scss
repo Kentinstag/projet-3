@@ -1,0 +1,59 @@
+@mixin rotate-center {
+  @keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@keyframes margin-right {
+  100% {
+    margin-right: 15%;
+  }
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    transform: translateY(8px);
+  }
+
+
+  100% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes apparition-system {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0.80;
+  }
+
+  50% {
+    opacity: 0.50;
+  }
+  
+  75% {
+    opacity: 0.25;
+  }
+  
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+  
+}

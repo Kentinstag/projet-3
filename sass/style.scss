@@ -1,13 +1,13 @@
-@use "./tools/colors.scss";
-@use "./tools/mixin.scss";
-@use "./tools/variables.scss";
-@use "./tools/animations.scss";
-@use "./disposition/starter.scss"; 
-@use "./disposition/header.scss";                          
-@use "./disposition/position.scss";
-@use "./disposition/explore.scss";
-@use "./disposition/operation.scss";                           
-@use "./disposition/restaurants.scss";  
-@use "./disposition/footer.scss";
-@use "./disposition/menus.scss";                                                      
+@use "./utils/colors.scss";
+@use "./utils/mixin.scss";
+@use "./utils/variables.scss";
+@use "./utils/animations.scss";
+@use "./layout/starter.scss"; 
+@use "./layout/header.scss";                          
+@use "./layout/position.scss";
+@use "./layout/explore.scss";
+@use "./layout/operation.scss";                           
+@use "./layout/restaurants.scss";  
+@use "./layout/footer.scss";
+@use "./layout/menus.scss";                                                      
  

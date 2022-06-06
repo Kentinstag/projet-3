@@ -1,7 +1,10 @@
-@use "../tools/colors.scss";
-@use "../tools/mixin.scss";
-@use "../tools/variables.scss";
-@use "../tools/animations.scss";
+@use "../utils/colors.scss";
+@use "../utils/mixin.scss";
+@use "../utils/variables.scss";
+@use "../utils/animations.scss";
+
+
+
 
 
 
@@ -13,6 +16,17 @@ a {
 
 main {
     background-color: colors.$lightergrey;
+}
+
+.apparition-system {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: apparition-system 0.4s;
+    animation-delay: 0.4s;
+    animation-fill-mode: both;
+    z-index: 100;
 }
 
 .padding-cheat {
@@ -59,8 +73,6 @@ main {
 }
 
 .empty-heart {
-
-
     position: absolute;
     z-index: 0;
     font-size: 170%;
@@ -76,13 +88,8 @@ main {
 .full-heart {
     z-index: 1;
     font-size: 172%;
-
     position: absolute;
     left: 85%;
-
-
-
-
     opacity: 0;
     background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220, ));
     background-clip: text;
@@ -151,6 +158,8 @@ main {
     display: inline-block;
     @include mixin.flex-between;
 
+
+
     padding-left: 10px;
     padding-right: 20px;
 
@@ -191,25 +200,47 @@ main {
 
 
 .container {
-    
+
     margin-top: 20px;
-    width: 414px;
+    max-width: 500px;
     border-radius: 20px;
     background-color: white;
     @include mixin.box-shadow;
-    
+    animation: apparition 1s;
+    // animation-timing-function: cubic-bezier(.5, .58, 0.80, .22);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
 
+
+
+    @media (max-width:variables.$breakpoint2) {
+        max-width: 100%;
+
+
+    }
+
+    & p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    & h4 {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 
     &:hover {
         display: flex;
 
         .left {
+            transition-duration: 500ms;
+            transition-property: margin-right;
 
-            animation: margin-right 1s ease-in-out;
         }
 
         .right {
-
             transition: all 1s ease-in-out;
             display: inline-flex;
 
@@ -221,9 +252,9 @@ main {
         }
 
         & p {
-             overflow: hidden;
-             white-space: nowrap;
-             text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
 
         }
 
@@ -232,6 +263,7 @@ main {
             white-space: nowrap;
             text-overflow: ellipsis;
         }
+
         cursor: pointer;
     }
 
@@ -243,6 +275,7 @@ main {
         color: colors.$tertiary;
         background-color: white;
         border-radius: 20px;
+        
     }
 
     .left {
@@ -250,18 +283,17 @@ main {
         white-space: nowrap;
         overflow: hidden;
         background-color: white;
-        transition: all 2s ease-in-out;
         flex-grow: 1;
+
 
     }
 
     .right {
         display: none;
-      
         align-items: center;
         justify-content: center;
         background-color: colors.$tertiary;
-        width: 80px;
+        min-width: 80px;
         border-radius: 0 20px 20px 0;
         
     }

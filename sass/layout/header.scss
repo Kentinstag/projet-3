@@ -1,0 +1,58 @@
+@use "../utils/colors.scss";
+
+
+.header {
+    font-family: "shrikhand", cursive;
+    text-align: center;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    padding: 0.1rem;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+}
+
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: loader 0.01s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.letters {
+    color: colors.$tertiary;
+    font-size: 40px;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+    animation: flash 1.2s linear infinite;
+    margin: auto;
+}
+
+@keyframes flash {
+    0% {
+        color: colors.$primary;
+        // text-shadow: 0 0 7px aqua;
+    }
+
+    50% {
+        color: colors.$secondary;
+    }
+
+    90% {
+        color: colors.$primary;
+        text-shadow: none;
+    }
+
+    100% {
+        color: colors.$tertiary;
+        // text-shadow: 0 0 7px aqua;
+
+    }
+}
