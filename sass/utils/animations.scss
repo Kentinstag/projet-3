@@ -10,11 +10,8 @@
   }
 }
 
-@keyframes margin-right {
-  100% {
-    margin-right: 15%;
-  }
-}
+
+
 
 @keyframes loader {
   100% {
@@ -25,12 +22,12 @@
 
 @keyframes apparition {
   0% {
-    transform: translateY(8px);
+    transform: translateY(10px);
   }
 
 
   100% {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
   }
 }
 

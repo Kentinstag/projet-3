@@ -5,67 +5,74 @@
 .restaurants {
     background-color: colors.$WhiteSmoke;
     padding: 30px 20px;
-   
-    
-    & h2 { 
+
+
+    & h2 {
         margin-top: 20px;
 
     }
-   
+
 }
 
 
 .cube-restaurants {
     width: 100%;
-    
     height: auto;
     background-color: white;
     border-radius: 20px;
     @include mixin.box-shadow;
-    
-   
-    
+
+
+
 
 }
 
 .card-image {
-   object-fit: cover;
+    object-fit: cover;
     height: 200px;
     width: 100%;
     border-radius: 15px 15px 0 0;
-  
+
 }
 
 .card-body {
-    
+
     p1 {
         font-weight: bold;
         padding-left: 1%;
     }
+
     p2 {
         padding-left: 1%;
         padding-bottom: 3%;
     }
-   
+
     margin: 20px;
     gap: 5px;
-   
+
     @include mixin.flex-column-start;
 
 
-   
-}   
+
+}
 
 
 
 .new {
     position: relative;
-    border-radius: 10px;
-  
+    border-radius: 20px;
+ 
 }
+.new-none {
+    position: relative;
+    border-radius: 20px;
+}
+
+
+
 .new::before {
     content: "Nouveau";
-    
+
     position: absolute;
     text-align: center;
     height: 1.8rem;
@@ -75,23 +82,47 @@
     background-color: colors.$tertiary;
     left: 75%;
     top: 5%;
+   
 
-    
 
     @media screen and (max-width:variables.$breakpoint2 ) {
-       left: 60%;
-       top: 7%;
+        left: 60%;
+        top: 7%;
+    }
+}
+
+.new-none::before {
+    content: "Nouveau";
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    height: 1.8rem;
+    width: 5rem;
+    display: grid;
+    place-items: center;
+    background-color: colors.$tertiary;
+    left: 75%;
+    top: 5%;
+   
+
+
+    @media screen and (max-width:variables.$breakpoint2 ) {
+        left: 60%;
+        top: 7%;
     }
 }
 
 
+
 .empty-heart {
-   
-    
-    position: absolute; 
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    // position: absolute;
     z-index: 0;
     font-size: 170%;
-    left: 85%;
+    // left: 85%;
 
     &:hover {
         opacity: 0;
@@ -99,17 +130,22 @@
 }
 
 .full-heart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
     z-index: 1;
     font-size: 172%;
-    
-    position: absolute;
-   left: 85%;
+
+
+    // position: absolute;
+    // left: 85%;
     opacity: 0;
-    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220,));
+    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220, ));
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: solid; 
+    -webkit-text-fill-color: solid;
+
     &:hover {
         opacity: 1;
         cursor: pointer;
@@ -121,9 +157,9 @@
 
 
 .empty-heart-cheated {
-   
-    
-    position: absolute; 
+
+
+    position: absolute;
     z-index: 0;
     font-size: 170%;
     left: 82.5%;
@@ -131,24 +167,25 @@
     &:hover {
         opacity: 0;
     }
+
     @media screen and (min-width: 1000px) {
         left: 83%
     }
-    
+
 }
 
 .full-heart-cheated {
     z-index: 1;
     font-size: 172%;
-    
+
     position: absolute;
-   left: 82.5%;
+    left: 82.5%;
     opacity: 0;
-    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220,));
+    background-image: linear-gradient(rgba(255, 121, 218, ), rgba(147, 86, 220, ));
     background-clip: text;
     color: transparent;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: solid; 
+    -webkit-text-fill-color: solid;
 
     @media screen and (min-width: 1000px) {
         left: 83%
@@ -161,5 +198,20 @@
     }
 }
 
- 
+@media (min-width:variables.$breakpoint) {
+    .tab-media {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+       
+        
 
+    } 
+    .cube-restaurants {
+        width: 600px;
+       margin: 20px;
+    }
+    
+}
