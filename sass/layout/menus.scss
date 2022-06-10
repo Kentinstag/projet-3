@@ -202,7 +202,7 @@ main {
 .container {
 
     margin-top: 20px;
-    max-width: 500px;
+    width: 400px;
     border-radius: 20px;
     background-color: white;
     @include mixin.box-shadow;
@@ -297,4 +297,5 @@ main {
         border-radius: 0 20px 20px 0;
         
     }
+
 }

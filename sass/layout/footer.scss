@@ -1,4 +1,6 @@
 @use "../utils/colors.scss";
+@use "../utils/variables.scss";
+@use "../utils/mixin.scss";
 
  footer {
      background-color: colors.$darkgrey;
@@ -20,10 +22,29 @@
      a {
          text-decoration: none;
          color: white;
+         & :hover {
+             @include mixin.scale;
+         }
      }
 
      i {
 
         padding-right: 8px;
      }
+
+
+     @media (min-width:variables.$breakpoint) {
+       
+      .media-foot {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+       & h2 {
+           @include mixin.flex-center;
+       }
+     }
+
  }
