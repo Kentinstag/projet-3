@@ -46,7 +46,6 @@ body {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 0.1rem;
   position: relative;
-  width: 100%;
   height: auto;
 }
 
@@ -435,7 +434,6 @@ main {
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   padding: 0.1rem;
   position: relative;
-  width: 100%;
   height: auto;
 }
 .header-menu::before {
@@ -541,6 +539,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 0;
+  transition: margin-right 320ms ease-in-out;
   padding-left: 10px;
   padding-right: 20px;
 }
@@ -586,8 +586,8 @@ main {
 }
 
 .container {
+  height: 80px;
   margin-top: 20px;
-  width: 400px;
   border-radius: 20px;
   background-color: white;
   box-shadow: 2px 1px 8px -2px #7e7e7e;
@@ -595,9 +595,14 @@ main {
   animation-timing-function: ease-in-out;
   animation-fill-mode: both;
 }
-@media (max-width: 413px) {
+@media (min-width: 413px) {
   .container {
-    max-width: 100%;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 600px;
   }
 }
 .container p {
@@ -606,24 +611,30 @@ main {
   text-overflow: ellipsis;
 }
 .container h4 {
+  padding-top: 3%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .container:hover {
-  display: flex;
   cursor: pointer;
 }
-.container:hover .left {
-  transition-duration: 500ms;
-  transition-property: margin-right;
-}
-.container:hover .right {
-  transition: all 1s ease-in-out;
-  display: inline-flex;
+.container:hover .price-pad {
+  margin-right: 80px;
+  transition: margin-right 280ms ease-in-out;
 }
 .container:hover i {
   animation: rotate-center 0.6s ease-in-out;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 20px;
+  color: #99e2d0;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @keyframes rotate-center {
   0% {
@@ -643,6 +654,14 @@ main {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.container:hover .check {
+  opacity: 1;
+  width: 80px;
+  transition: transform 0.4s ease-in, width 0.4s ease-in, opacity 0.4s ease-in;
+  transition-property: transform, width, opacity;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0, 0, 0;
+}
 .container i {
   align-items: center;
   justify-content: center;
@@ -651,21 +670,31 @@ main {
   color: #99e2d0;
   background-color: white;
   border-radius: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.container .left {
-  border-radius: 20px;
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  width: 0;
+  height: 80px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
   white-space: nowrap;
   overflow: hidden;
-  background-color: white;
-  flex-grow: 1;
-}
-.container .right {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background-color: #99e2d0;
-  min-width: 80px;
-  border-radius: 0 20px 20px 0;
+  text-overflow: ellipsis;
+  transition: transform 0.4s ease-in, width 0.4s ease-in, opacity 0.4s ease-in;
+  transition-property: transform, width, opacity;
+  transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+  transition-delay: 0, 0, 0;
 }
 
 @media (min-width: 768px) {

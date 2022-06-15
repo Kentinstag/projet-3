@@ -16,7 +16,7 @@ a {
 
 main {
     background-color: colors.$lightergrey;
-    
+
 
 }
 
@@ -46,7 +46,6 @@ main {
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     padding: 0.1rem;
     position: relative;
-    width: 100%;
     height: auto;
 
     &::before {
@@ -122,7 +121,7 @@ main {
     border-radius: 35px 35px 0 0;
     position: relative;
     margin-top: -50px;
-    
+
 
     & h2 {
 
@@ -160,6 +159,9 @@ main {
 .price-pad {
     display: inline-block;
     @include mixin.flex-between;
+    margin-right: 0;
+    transition: margin-right 320ms ease-in-out;
+
 
 
 
@@ -179,10 +181,13 @@ main {
 
 
 .price-bold {
+
     font-weight: bold;
     //* lorsque Hover pour déclencher plus tôt l'ellipsis
     padding-left: 10px;
+
     //*
+
 }
 
 
@@ -203,9 +208,8 @@ main {
 
 
 .container {
-
+    height: 80px;
     margin-top: 20px;
-    width: 400px;
     border-radius: 20px;
     background-color: white;
     @include mixin.box-shadow;
@@ -214,46 +218,62 @@ main {
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
 
-   
-
-    @media (max-width:variables.$breakpoint2) {
-        max-width: 100%;
 
 
+    @media (min-width:variables.$breakpoint2) {
+        width: 100%;
+
+
+    }
+
+    @media (min-width:variables.$breakpoint) {
+        width: 600px;
     }
 
 
 
     & p {
+
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
 
     & h4 {
+        padding-top: 3%;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
 
     &:hover {
-        display: flex;
 
-        .left {
-            transition-duration: 500ms;
-            transition-property: margin-right;
+        .price-pad {
 
+            margin-right: 80px;
+            transition: margin-right 280ms ease-in-out;
         }
 
-        .right {
-            transition: all 1s ease-in-out;
-            display: inline-flex;
 
-        }
+
+
+
 
         & i {
+
             @include animations.rotate-center;
             animation: rotate-center 0.6s ease-in-out;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            font-size: 20px;
+            color: colors.$tertiary;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
         }
 
         & p {
@@ -267,12 +287,24 @@ main {
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+
         }
 
         cursor: pointer;
+
+
+        & .check {
+            opacity: 1;
+            width: 80px;
+            transition: transform 0.4s ease-in, width 0.4s ease-in, opacity 0.4s ease-in;
+            transition-property: transform, width, opacity;
+            transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+            transition-delay: 0, 0, 0;
+        }
+
     }
 
-    & i {
+    i {
         align-items: center;
         justify-content: center;
         padding: 5px;
@@ -280,35 +312,44 @@ main {
         color: colors.$tertiary;
         background-color: white;
         border-radius: 20px;
-
-    }
-
-    .left {
-        border-radius: 20px;
-        white-space: nowrap;
         overflow: hidden;
-        background-color: white;
-        flex-grow: 1;
-
-
-    }
-
-    .right {
-        display: none;
-        align-items: center;
-        justify-content: center;
-        background-color: colors.$tertiary;
-        min-width: 80px;
-        border-radius: 0 20px 20px 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
     }
 
 
+
+
+
+}
+
+
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: colors.$tertiary;
+    width: 0;
+    height: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: transform 0.4s ease-in, width 0.4s ease-in, opacity 0.4s ease-in;
+    transition-property: transform, width, opacity;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0, 0, 0;
 }
 
 .media-menu {
     @media (min-width:variables.$breakpoint) {
         @include mixin.flex-column-center;
-       
+
     }
 }
